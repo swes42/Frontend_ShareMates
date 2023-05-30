@@ -64,7 +64,7 @@ function apiFacade() {
     /* ------------------ CRUD ------------------ */
     function addUser(user) {
         let options = makeOptions("POST", false, user)
-        return fetch(URL, "add", options) //Returns promise
+        return fetch(URL + "api/user/add", options) //Returns promise
             .then(handleHttpErrors);
     }
 

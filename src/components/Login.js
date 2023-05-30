@@ -30,7 +30,7 @@ export function LogIn({ login }) {
     const [dataFromServer, setDataFromServer] = useState("")
   
       useEffect(() => { facade.fetchRoles(roles).then(data=> setDataFromServer(data.msg));
-      }, [])
+      }, [roles])
     
   
       return (
