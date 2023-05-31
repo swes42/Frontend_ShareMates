@@ -71,13 +71,13 @@ function apiFacade() {
     // function editUser(username) {
     //     let options = makeOptions("PUT", true, username);
     //     // console.log(options);
-    //     return fetch(URL + username, options)
+    //     return fetch(URL + "api/user/edit" + username, options)
     //         .then(handleHttpErrors);
     // }
 
     // function deleteUser(username) {
     //     let options = makeOptions("DELETE", true, username);
-    //     return fetch(URL_USER + "admin/" + username, options)
+    //     return fetch(URL + "api/user/delete" + username, options)
     //         .then(handleHttpErrors);
     // }
     /* ------------------ Options ------------------ */
