@@ -5,8 +5,6 @@ import {
 import React from "react"
 
     export default function Header({isLoggedIn, loginMsg, roles}) {
-        //console.log("isLoggedIn: " + isLoggedIn);
-        // If isLoggedIn is true the element after && is rendered
 
         return (
         <div>
@@ -14,11 +12,20 @@ import React from "react"
                 <li><NavLink exact activeClassName="active" to="/">Home</NavLink></li>
                 <li><NavLink activeClassName="active" to="/login">{loginMsg}</NavLink></li>
 
+                {isLoggedIn && roles==='["user"]' && (
+                <React.Fragment>
+                <li><NavLink exact activeClassName="active" to="/equipment">Equipment</NavLink></li>
+                <li><NavLink exact activeClassName="active" to="/lend">Lend</NavLink></li>
+                </React.Fragment>
+                )}
+
                 {!isLoggedIn && (
                 <React.Fragment>
                     <li><NavLink activeClassName="active" to="/register">Add</NavLink></li>
                 </React.Fragment>
                 )}
+
+
             </ul>
         </div>
         );

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import { localURL as URL } from "../utils/settings.js";
 import { LocalURL as URL } from '../utils/settings.js'
+//import { OnlineURL as URL } from '../utils/settings.js'
 
 function handleHttpErrors(res) {
     if (!res.ok) {

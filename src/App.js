@@ -8,6 +8,8 @@ import facade from './api/apiFacade.js'
 import Register from './components/Register.js'
 import Header from "./components/Header"
 import Home from "./components/Home"
+import Equipment from "./components/Equipment"
+import Lend from "./components/Lend"
 
 
 import { LogIn, LoggedIn } from "./components/Login"
@@ -76,6 +78,14 @@ function App() {
 
               <Route path ="/register">
                 <Register />
+              </Route>
+
+              <Route path="/equipment">
+                <Equipment />
+              </Route>
+
+              <Route path="/lend">
+                <Lend />
               </Route>
 
             </Switch>

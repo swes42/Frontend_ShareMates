@@ -1,4 +1,4 @@
-import facade from '../api/apiFacade.js'
+import facade from "../api/apiFacade.js";
 import React, { useState, useEffect } from "react";
 
 export default function Register() {
@@ -26,26 +26,21 @@ export default function Register() {
           }
         });
     } else {
-        setMessage("The two passwords do not match! Please try again");
+      setMessage("Password doesnt match? ");
     }
   }
 
   const onChange = (evt) => {
-    setUser({ ...user, [evt.target.id]: evt.target.value });//Uses the spread operator, takes the properties already in user(Right now empty strings) (or changes them if the name of the property is the same) + the values of the event's target id (they need to match the value eg. username and password.)
-    //In Danish just cause:
-    //den tager alle properties fra user, og tilføjer en ny , eller erstatter en hvis navn af property er den samme
-    //så evt.target.id er et navn af property, som i vores tilfælde username eller password og evn.target.value er value af den property
-
-
-
+    setUser({ ...user, [evt.target.id]: evt.target.value });
   };
 
   const onChangeRepeatPassword = (evt) => {
     setRepeatPassword(evt.target.value);
   };
+
   return (
     <div>
-      <h2>Register a user!</h2>
+      <h2>Sign up mate!</h2>
       <label htmlFor="username">Username</label>
       <br></br>
       <input
@@ -74,7 +69,7 @@ export default function Register() {
         id="password2"
         onChange={onChangeRepeatPassword}
       />
-      <button onClick={addUser}>Register!</button>
+      <button onClick={addUser}>Register</button>
       <p>{message}</p>
     </div>
   );

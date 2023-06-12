@@ -35,7 +35,7 @@ export function LogIn({ login }) {
   
       return (
         <div>
-          <h2>Data Received from server</h2>
+          <h2>Hi, long time no see mate </h2>
           <h3>{dataFromServer}</h3>
         </div>
       )
